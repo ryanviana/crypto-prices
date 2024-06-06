@@ -68,7 +68,7 @@ services:
   bitcoin-service:
     build: ./bitcoin-service
     ports:
-      - "8081:8080"
+      - "5054:8080" # Changed to map 5054 to 8080 inside the container
     depends_on:
       - kafka
       - mongo
@@ -78,7 +78,7 @@ services:
   ethereum-service:
     build: ./ethereum-service
     ports:
-      - "8082:8080"
+      - "6054:8080" # Changed to map 6054 to 8080 inside the container
     depends_on:
       - kafka
       - mongo
